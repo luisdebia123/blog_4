@@ -1,0 +1,25 @@
+{%  extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    {{ posts.titulo }}
+{% endblock titulo %}
+
+{% block imagen %}
+    {{ posts.imagen}}
+{% endblock imagen %}
+
+{% block titulo_principal %}
+    {{  posts.titulo }}
+    <p>{{ posts.description }}</p>
+    Escrito por : {{ posts.autor }}
+{% endblock titulo_principal %}
+
+{% block barra_busqueda %}
+{% endblock barra_busqueda %}
+
+
+{% block contenido %}
+    {{ posts.contenido | safe }}
+{% endblock contenido %}
+
